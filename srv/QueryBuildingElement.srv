@@ -1,0 +1,11 @@
+# Request: Query parameters
+string building_id
+string query_type   # "ELEMENT", "ROOM", "FLOOR", etc.
+string element_id   # ID of the element to query, if known
+geometry_msgs/Point position  # Position to query, if element_id not provided
+float64 radius      # Search radius around position (meters)
+---
+# Response: Element data
+bool found
+BuildingElement[] elements  # Array of found elements
+string error_message

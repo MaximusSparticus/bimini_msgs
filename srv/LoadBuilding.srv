@@ -1,0 +1,8 @@
+# Request: Path to the IFC file to load
+string file_path
+bool validate_file  # Whether to validate the IFC file structure
+---
+# Response: Result of loading operation
+bool success
+string building_id  # ID of the loaded building if successful
+string error_message  # Error message if loading failed

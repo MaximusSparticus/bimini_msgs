@@ -1,0 +1,13 @@
+# Request: Navigation mesh generation parameters
+string building_id
+string[] included_floors  # Floor IDs to include, empty for all
+float64 resolution        # Grid resolution in meters
+float64 agent_radius      # Radius of the robot in meters
+bool include_furniture    # Whether to include furniture as obstacles
+---
+# Response: Navigation data
+bool success
+string map_id             # ID of the generated map
+nav_msgs/OccupancyGrid[] floor_maps  # 2D grid maps for each floor
+string mesh_resource      # Path to 3D navigation mesh file if generated
+string error_message

@@ -1,0 +1,13 @@
+# Request: Export parameters
+string building_id
+string format            # "URDF", "SDF", "GAZEBO", etc.
+string destination_path  # Path to save exported files
+bool include_semantics   # Whether to include semantic information
+bool include_collision   # Whether to include collision models
+bool simplify_geometry   # Whether to simplify geometry for performance
+---
+# Response: Export result
+bool success
+string[] exported_files  # List of all files exported
+string main_file         # Primary file to load (e.g., main URDF)
+string error_message
